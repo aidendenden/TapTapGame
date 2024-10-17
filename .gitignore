@@ -5,3 +5,4 @@ My project/UserSettings
 *.sln
 My project/obj
 My project/.idea
+*.csproj

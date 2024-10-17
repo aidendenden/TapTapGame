@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogSystrm : MonoBehaviour
 {
     [Header("UI组件")]
-    public Text textLabel;
-    public Image faceImage;
+    public TMP_Text textLabel;
+    //public Image faceImage;
 
     public GameObject selectButton;
 
@@ -17,7 +18,7 @@ public class DialogSystrm : MonoBehaviour
     public float textSpeed;
 
     [Header("头像")]
-    public Sprite face01, face02;
+    //public Sprite face01, face02;
 
     bool textFinished;
     bool cancelTyping;
@@ -27,14 +28,12 @@ public class DialogSystrm : MonoBehaviour
     public static bool isTalk;
 
     List<string> textList = new List<string>();
-
-
+    
 
     // Start is called before the first frame update
     void Awake()
     {
         GetTextFormFile(textFile);
-
     }
 
     private void OnEnable()
@@ -51,7 +50,7 @@ public class DialogSystrm : MonoBehaviour
         {
             isTalk = false;
             oneFinish = true;
-            selectButton.SetActive(true);
+            //selectButton.SetActive(true);
             index = 0;
             return;
 
@@ -83,40 +82,67 @@ public class DialogSystrm : MonoBehaviour
         }
     }
 
-
-
     IEnumerator SetTextUI()
     {
-
         textFinished = false;
         textLabel.text = "";
-
-        switch (textList[index])
+        // 检查并处理特殊标记
+        if (textList[index] == "A")
         {
-
-            case "A":
-
-                faceImage.sprite = face01;
-                index++;
-                break;
-            case "B":
-
-                faceImage.sprite = face02;
-                index++;
-                break;
+            Debug.Log("111");
+            //faceImage.sprite = face01;
+            index++; // 跳过到下一个文本
+        }
+        else if (textList[index] == "B")
+        {
+            Debug.Log("222");
+            //faceImage.sprite = face02;
+            index++; // 跳过到下一个文本
         }
 
-        int letter = 0;
-        while (!cancelTyping && letter < textList[index].Length - 1)
+        // 确保不越界
+        if (index >= textList.Count)
         {
-
-            textLabel.text += textList[index][letter];
-            letter++;
-            yield return new WaitForSeconds(textSpeed);
+            yield break;
         }
-        textLabel.text = textList[index];
+        
+        string fullText = textList[index];
+        int charIndex = 0;
+        while (!cancelTyping && charIndex < fullText.Length)
+        {
+            // 检查是否是富文本标签的开始
+            if (fullText[charIndex] == '<')
+            {
+                // 查找富文本标签的结束
+                int endIndex = fullText.IndexOf('>', charIndex);
+                if (endIndex == -1)
+                {
+                    endIndex = fullText.Length;
+                }
+                else
+                {
+                    // 包括标签结束符号
+                    endIndex += 1;
+                }
+
+                // 添加整个标签
+                textLabel.text += fullText.Substring(charIndex, endIndex - charIndex);
+                charIndex = endIndex;
+            }
+            else
+            {
+                // 添加单个字符
+                textLabel.text += fullText[charIndex];
+                charIndex++;
+                yield return new WaitForSeconds(textSpeed);
+            }
+        }
+
+        // 确保显示完整的文本
+        textLabel.text = fullText;
         cancelTyping = false;
         textFinished = true;
         index++;
     }
+
 }
