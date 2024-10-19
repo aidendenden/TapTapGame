@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DialogSystrm : MonoBehaviour
 {
     [Header("UI组件")]
-    public TMP_Text textLabel;
+    public Text textLabel;
     //public Image faceImage;
 
     public GameObject selectButton;
@@ -27,7 +27,7 @@ public class DialogSystrm : MonoBehaviour
 
     public static bool isTalk;
 
-    List<string> textList = new List<string>();
+    public List<string> textList = new List<string>();
     
 
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class DialogSystrm : MonoBehaviour
     {
         GetTextFormFile(textFile);
     }
-
+    
     private void OnEnable()
     {
         //textLabel.text = textList[index];
@@ -69,7 +69,15 @@ public class DialogSystrm : MonoBehaviour
         }
     }
 
-    void GetTextFormFile(TextAsset file)
+    public void SayToDialog(TextAsset file)
+    {
+        GetTextFormFile(file);
+        textFinished = true;
+        oneFinish = false;
+        StartCoroutine("SetTextUI");
+    }
+    
+    public void GetTextFormFile(TextAsset file)
     {
         textList.Clear();
         index = 0;
@@ -87,18 +95,18 @@ public class DialogSystrm : MonoBehaviour
         textFinished = false;
         textLabel.text = "";
         // 检查并处理特殊标记
-        if (textList[index] == "A")
-        {
-            Debug.Log("111");
-            //faceImage.sprite = face01;
-            index++; // 跳过到下一个文本
-        }
-        else if (textList[index] == "B")
-        {
-            Debug.Log("222");
-            //faceImage.sprite = face02;
-            index++; // 跳过到下一个文本
-        }
+        // if (textList[index] == "A")
+        // {
+        //     Debug.Log("111");
+        //     //faceImage.sprite = face01;
+        //     index++; // 跳过到下一个文本
+        // }
+        // else if (textList[index] == "B")
+        // {
+        //     Debug.Log("222");
+        //     //faceImage.sprite = face02;
+        //     index++; // 跳过到下一个文本
+        // }
 
         // 确保不越界
         if (index >= textList.Count)
