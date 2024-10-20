@@ -13,7 +13,7 @@ public class DialogSystrm : MonoBehaviour
     public GameObject selectButton;
 
     [Header("文本文件")]
-    public TextAsset textFile;
+    private DialogScriptableObject textFile;
     public int index;
     public float textSpeed;
 
@@ -33,7 +33,8 @@ public class DialogSystrm : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        GetTextFormFile(textFile);
+        textFile = Resources.Load<DialogScriptableObject>("DialogScriptableObject");
+        //GetTextFormFile(textFile);
     }
     
     private void OnEnable()
