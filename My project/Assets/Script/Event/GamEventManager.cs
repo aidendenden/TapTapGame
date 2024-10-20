@@ -22,7 +22,7 @@ public class GameEventManager : MonoBehaviour
 
     public void Triggered(string message, Transform _transform, Vector3 _vector3)
     {
-        Debug.Log("Triggered: " + message);
+       // Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
             OnTrigger(message, _transform, _vector3);
     }
