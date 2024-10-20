@@ -497,7 +497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7d32e57b915ecc040810407da2c86feb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b3f4c5bc39497147abcc8dc57b5c7d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2ccf81503af2dd4459b951b034fa24d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d43377f1fa72280448b1e00b791f1295, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -843,9 +843,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1155314965}
   selectButton: {fileID: 54820958}
-  textFile: {fileID: 4900000, guid: 4004a67792c28af49ae5c645855260d5, type: 3}
   index: 0
   textSpeed: 0
+  textList: []
 --- !u!4 &1779651094
 Transform:
   m_ObjectHideFlags: 0
