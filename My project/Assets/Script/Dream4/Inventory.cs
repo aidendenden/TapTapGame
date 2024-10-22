@@ -30,5 +30,17 @@ public class Inventory : MonoBehaviour
     {
         slot.Remove();
         slot.transform.SetAsLastSibling();
+        int index =slots.IndexOf(slot);
+        MoveToLast<Slot>(slots,index);
+    }
+    
+    public void MoveToLast<T>(List<T> list, int index)
+    {
+        if (index >= 0 && index < list.Count)
+        {
+            T element = list[index];  
+            list.RemoveAt(index);     
+            list.Add(element);        
+        }
     }
 }
