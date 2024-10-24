@@ -11,17 +11,17 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            // if (_instance == null)
-            // {
-            //     _instance = FindObjectOfType<GameManager>();
-            //
-            //     if (_instance == null)
-            //     {
-            //         GameObject singleton = new GameObject(typeof(GameManager).Name);
-            //         _instance = singleton.AddComponent<GameManager>();
-            //         DontDestroyOnLoad(singleton);
-            //     }
-            // }
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<GameManager>();
+
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject(typeof(GameManager).Name);
+                    _instance = singleton.AddComponent<GameManager>();
+                    DontDestroyOnLoad(singleton);
+                }
+            }
             return _instance;
         }
     }
