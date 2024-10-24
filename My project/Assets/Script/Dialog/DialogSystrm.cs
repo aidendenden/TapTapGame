@@ -8,12 +8,11 @@ public class DialogSystrm : MonoBehaviour
 {
     [Header("UI组件")]
     public Text textLabel;
-    //public Image faceImage;
 
     public GameObject selectButton;
 
     [Header("文本文件")]
-    private DialogScriptableObject textFile;
+    public DialogScriptableObject dialogData;  // 使用 DialogScriptableObject
     public int index;
     public float textSpeed;
 
@@ -24,41 +23,33 @@ public class DialogSystrm : MonoBehaviour
     bool cancelTyping;
     bool oneFinish;
 
-
     public static bool isTalk;
 
     public List<string> textList = new List<string>();
-    
 
-    // Start is called before the first frame update
     void Awake()
     {
-        textFile = Resources.Load<DialogScriptableObject>("DialogScriptableObject");
-        //GetTextFormFile(textFile);
+        // 这里不需要再从 Resources 加载，直接使用外部传入的 dialogData
+        GetTextFromDialogData(dialogData);
     }
-    
+
     private void OnEnable()
     {
-        //textLabel.text = textList[index];
-        //index++;
         textFinished = true;
         StartCoroutine("SetTextUI");
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.anyKeyDown && index == textList.Count && !oneFinish)
         {
             isTalk = false;
             oneFinish = true;
-            //selectButton.SetActive(true);
             index = 0;
             return;
-
         }
-        if (Input.anyKeyDown&&!oneFinish)
+        if (Input.anyKeyDown && !oneFinish)
         {
-
             if (textFinished && !cancelTyping)
             {
                 StartCoroutine("SetTextUI");
@@ -70,59 +61,40 @@ public class DialogSystrm : MonoBehaviour
         }
     }
 
-    public void SayToDialog(TextAsset file)
-    {
-        GetTextFormFile(file);
-        textFinished = true;
-        oneFinish = false;
-        StartCoroutine("SetTextUI");
-    }
-    
-    public void GetTextFormFile(TextAsset file)
+    // 从 DialogScriptableObject 中获取对话数据
+    public void GetTextFromDialogData(DialogScriptableObject dialogData)
     {
         textList.Clear();
         index = 0;
 
-        var lineData = file.text.Split('\n');
-
-        foreach (var Line in lineData)
+        // 假设我们从 itemInteraction 列表中读取内容
+        foreach (var item in dialogData.itemInteraction)
         {
-            textList.Add(Line);
+            foreach (var line in item.content)
+            {
+                textList.Add(line);  // 将每个物品的交互内容加入 textList
+            }
         }
+
+        // 你也可以根据场景或其他条件选择从 sceneInteraction 中读取数据
     }
 
     IEnumerator SetTextUI()
     {
         textFinished = false;
         textLabel.text = "";
-        // 检查并处理特殊标记
-        // if (textList[index] == "A")
-        // {
-        //     Debug.Log("111");
-        //     //faceImage.sprite = face01;
-        //     index++; // 跳过到下一个文本
-        // }
-        // else if (textList[index] == "B")
-        // {
-        //     Debug.Log("222");
-        //     //faceImage.sprite = face02;
-        //     index++; // 跳过到下一个文本
-        // }
 
-        // 确保不越界
         if (index >= textList.Count)
         {
             yield break;
         }
-        
+
         string fullText = textList[index];
         int charIndex = 0;
         while (!cancelTyping && charIndex < fullText.Length)
         {
-            // 检查是否是富文本标签的开始
             if (fullText[charIndex] == '<')
             {
-                // 查找富文本标签的结束
                 int endIndex = fullText.IndexOf('>', charIndex);
                 if (endIndex == -1)
                 {
@@ -130,28 +102,22 @@ public class DialogSystrm : MonoBehaviour
                 }
                 else
                 {
-                    // 包括标签结束符号
                     endIndex += 1;
                 }
-
-                // 添加整个标签
                 textLabel.text += fullText.Substring(charIndex, endIndex - charIndex);
                 charIndex = endIndex;
             }
             else
             {
-                // 添加单个字符
                 textLabel.text += fullText[charIndex];
                 charIndex++;
                 yield return new WaitForSeconds(textSpeed);
             }
         }
 
-        // 确保显示完整的文本
         textLabel.text = fullText;
         cancelTyping = false;
         textFinished = true;
         index++;
     }
-
 }
