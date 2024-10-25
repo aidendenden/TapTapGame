@@ -8,7 +8,7 @@ using static UnityEditor.Progress;
 
 public class Day1Game : MonoBehaviour
 {
-    public static int count = 4;
+    public static int count = 3;
 
     [Header("按钮和亮灯")]
     public Button[] btns1 = new Button[count];
@@ -26,7 +26,7 @@ public class Day1Game : MonoBehaviour
     public int[] pair1 = new int[2];
     public int[] pair2 = new int[2];
     public int[] pair3 = new int[2];
-    public int[] pair4 = new int[2];
+    //public int[] pair4 = new int[2];
 
     private Dictionary<int, int> pairs = new Dictionary<int, int>();
 
@@ -83,7 +83,7 @@ public class Day1Game : MonoBehaviour
     private void SetPair()
     {
         pairs.Add(index1, index2);
-        if (pairs.Count == 4)
+        if (pairs.Count == count)
         {
             Compare();
             return;
@@ -136,10 +136,10 @@ public class Day1Game : MonoBehaviour
             {
                 continue;
             }
-            else if (pair.Key == pair4[0] - 1 && pair.Value == pair4[1] - 1)
-            {
-                continue;
-            }
+            //else if (pair.Key == pair4[0] - 1 && pair.Value == pair4[1] - 1)
+            //{
+            //    continue;
+            //}
             else
             {
                 ReSet();
@@ -204,12 +204,12 @@ public class Day1Game : MonoBehaviour
             System.Array.Resize(ref lights2, count);
         }
 
-        if (pair1.Length != 2 || pair2.Length != 2 || pair3.Length != 2 || pair4.Length != 2)
+        if (pair1.Length != 2 || pair2.Length != 2 || pair3.Length != 2 /*|| pair4.Length != 2*/)
         {
             System.Array.Resize(ref pair1, 2);
             System.Array.Resize(ref pair2, 2);
             System.Array.Resize(ref pair3, 2);
-            System.Array.Resize(ref pair4, 2);
+            //System.Array.Resize(ref pair4, 2);
         }
     }
 }
