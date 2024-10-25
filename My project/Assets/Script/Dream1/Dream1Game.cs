@@ -9,6 +9,7 @@ public class Dream1Game : MonoBehaviour
     public RectTransform box;
     public RectTransform player;
     public List<RectTransform> pointTF;
+    public Animator animator;
 
     private int playerPosition;
     private int boxPosition;
@@ -36,21 +37,44 @@ public class Dream1Game : MonoBehaviour
             catchBox = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             MoveLeft();
+            animator.SetBool("WalkLeft", true);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else
+        {
+            animator.SetBool("WalkLeft", false);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             MoveRight();
+            animator.SetBool("WalkRight", true);
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else
+        {
+            animator.SetBool("WalkRight", false);
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             MoveUp();
+            animator.SetBool("WalkUp", true);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else
+        {
+            animator.SetBool("WalkUp", false);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             MoveDown();
+            animator.SetBool("WalkDown", true);
+        }
+        else
+        {
+            animator.SetBool("WalkDown", false);
         }
     }
 

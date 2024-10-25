@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 113845846}
   - component: {fileID: 113845848}
   - component: {fileID: 113845847}
+  - component: {fileID: 113845849}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -389,7 +390,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 605, y: -500}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113845847
 MonoBehaviour:
@@ -429,6 +430,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113845845}
   m_CullTransparentMesh: 1
+--- !u!95 &113845849
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113845845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a378bd4e45ccbf045b88dae43ca9636d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &246084867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1552,7 @@ MonoBehaviour:
   - {fileID: 1984536645}
   - {fileID: 698221667}
   - {fileID: 742588244}
+  animator: {fileID: 113845849}
 --- !u!114 &795433655
 MonoBehaviour:
   m_ObjectHideFlags: 0
