@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1321819312317017684}
   - component: {fileID: 1321819312317017675}
   - component: {fileID: -6241783143262950004}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: brokenStone_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4871,7 +4871,7 @@ GameObject:
   - component: {fileID: 1321819312698821188}
   - component: {fileID: 1321819312698821190}
   - component: {fileID: 1321819312698821189}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9771,7 +9771,7 @@ GameObject:
   - component: {fileID: 1321819312844058246}
   - component: {fileID: 1321819312844058240}
   - component: {fileID: 1321819312844058247}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: glow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14680,7 +14680,7 @@ GameObject:
   - component: {fileID: 1321819312963153756}
   - component: {fileID: 1321819312963153758}
   - component: {fileID: 1321819312963153757}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19580,7 +19580,7 @@ GameObject:
   - component: {fileID: 1321819312971539739}
   - component: {fileID: 1321819312971539749}
   - component: {fileID: 1321819312971539748}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: glowL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24489,7 +24489,7 @@ GameObject:
   - component: {fileID: 4575784685356349134}
   - component: {fileID: 8418295551309155015}
   - component: {fileID: 1345340369373200237}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: liusha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
