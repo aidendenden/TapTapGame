@@ -5,6 +5,6 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    public string name;
+    public new string name;
     public Image Image;
 }
