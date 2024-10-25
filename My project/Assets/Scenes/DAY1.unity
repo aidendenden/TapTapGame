@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &23827786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -263,10 +263,10 @@ RectTransform:
   - {fileID: 181834157}
   m_Father: {fileID: 75655199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -195}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23827787
 MonoBehaviour:
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 150, y: 120}
+  m_Spacing: {x: 204.94, y: 120}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &123249864
@@ -2426,7 +2426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1194692170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2443,10 +2443,10 @@ RectTransform:
   - {fileID: 1628778784}
   m_Father: {fileID: 75655199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -25}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194692171
 MonoBehaviour:
@@ -2583,22 +2583,18 @@ MonoBehaviour:
   - {fileID: 787145131}
   - {fileID: 892599862}
   - {fileID: 1016932819}
-  - {fileID: 1194692171}
   btns2:
   - {fileID: 1964254229}
   - {fileID: 341839522}
   - {fileID: 1522840326}
-  - {fileID: 23827787}
   lights1:
   - {fileID: 1622510308}
   - {fileID: 1462878159}
   - {fileID: 332729858}
-  - {fileID: 1628778785}
   lights2:
   - {fileID: 1799603133}
   - {fileID: 123249866}
   - {fileID: 484160552}
-  - {fileID: 181834158}
   colors:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0.2779243, g: 1, b: 0, a: 1}
@@ -2606,8 +2602,7 @@ MonoBehaviour:
   - {r: 1, g: 0.8035209, b: 0, a: 1}
   pair1: 0100000002000000
   pair2: 0200000003000000
-  pair3: 0300000004000000
-  pair4: 0400000001000000
+  pair3: 0300000001000000
 --- !u!1 &1462878157
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,6 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1155314965}
   selectButton: {fileID: 54820958}
+  dialogData: {fileID: 11400000, guid: 4be688ba2e500e640a96d6c134009dde, type: 2}
   index: 0
   textSpeed: 0
   textList: []
