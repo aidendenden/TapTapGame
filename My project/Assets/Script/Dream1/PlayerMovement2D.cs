@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 { 
-    [Header("Movement")] [Range(1, 40)] public float moveSpeedMultiplier = 8f;
+    [Header("Movement")] [Range(1, 20)] public float moveSpeedMultiplier = 8f;
     [Range(-1f, 1f)] public float horizontal;
     [Range(-1f, 1f)] public float vertical;
     public Animator animator = null;
