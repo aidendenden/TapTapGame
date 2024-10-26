@@ -18,8 +18,8 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
         Time.timeScale = 1;
-        //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        StartCoroutine(LoadLevel(loadSceneIndex));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        //StartCoroutine(LoadLevel(loadSceneIndex));
     }
 
     IEnumerator LoadLevel(int levelIndex)
