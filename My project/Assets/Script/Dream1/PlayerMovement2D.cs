@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 { 
-    [Header("Movement")] [Range(1, 20)] public float moveSpeedMultiplier = 8f;
+    [Header("Movement")] [Range(1, 40)] public float moveSpeedMultiplier = 8f;
     [Range(-1f, 1f)] public float horizontal;
     [Range(-1f, 1f)] public float vertical;
     public Animator animator = null;
     public new Rigidbody2D rigidbody;
-    private readonly Vector3 facingRight = new Vector3(1, 1, 1);
-    private readonly Vector3 facingLeft = new Vector3(-1, 1, 1);
-
-    [Header("Graphics references")]
-    public GameObject dustPrt;
-
-    public GameObject playCamera;
     
     private Vector2 movement;
     
@@ -23,7 +16,6 @@ public class PlayerMovement2D : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         
-        this.enabled = false;
     }
 
     private void Start()
@@ -54,25 +46,42 @@ public class PlayerMovement2D : MonoBehaviour
         rigidbody.MovePosition(rigidbody.position + movement.normalized * moveSpeedMultiplier * Time.fixedDeltaTime);
     }
 
-    // TODO: Directional input works while airborne...feature?
     void HandleMove()
     {
-        // Capture inputs
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        
-        if (horizontal > 0) this.transform.localScale = facingRight;
-        else if (horizontal < 0) this.transform.localScale = facingLeft;
 
-        if (horizontal != 0 || vertical != 0)
+
+        if (horizontal > 0)
         {
-            animator.Play("Walk");
-            dustPrt.SetActive(true);
+            animator.SetBool("WalkRight", true);
+            animator.SetBool("WalkLeft", false);
+        }
+        else if (horizontal < 0)
+        {
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", true);
         }
         else
         {
-            animator.Play("Idle");
-            dustPrt.SetActive(false);
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", false);
+        }
+
+        if (vertical > 0)
+        {
+            animator.SetBool("WalkUp", true);
+            animator.SetBool("WalkDown", false);
+        }
+        else if (vertical < 0)
+        {
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", true);
+        }
+        else
+        {
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", false);
         }
     }
 }
