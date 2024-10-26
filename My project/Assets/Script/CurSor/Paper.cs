@@ -1,43 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class InvestigateArea : MonoBehaviour
+public class Paper : MonoBehaviour
 {
-    private CurSorManager cursorManager;
+    public Sprite burnPaper;
     private Collider2D areaCollider;
+    [SerializeField] SpriteRenderer Renderer;
     [SerializeField] private bool isCursorIn = false;
-
-
     private void Start()
-    {
-        cursorManager = FindObjectOfType<CurSorManager>(); 
+    {      
         areaCollider = GetComponent<Collider2D>();
     }
 
     private void Update()
     {
-
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-
         if (areaCollider.OverlapPoint(mousePosition))
         {
+
+            UIDrag.isInPaperArea = true;
             if (!isCursorIn)
             {
-                cursorManager.SetInvestigateCursor();
+                
                 isCursorIn = true;
             }
-
         }
         else
         {
+            UIDrag.isInPaperArea = false;
             if (isCursorIn)
             {
-                cursorManager.SetDefaultCursor();
+               
                 isCursorIn = false;
             }
-
         }
+    }
+    public void BurnPaper()
+    {
+        Renderer.sprite = burnPaper;
     }
 }

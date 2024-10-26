@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|f:\\up\\taptapgame\\taptapgame\\my project\\assets\\script\\cursor\\selfdestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cursor\\selfdestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\cursormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cursormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,11 +23,7 @@
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cursor\\interactarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|f:\\up\\taptapgame\\taptapgame\\my project\\assets\\script\\cursor\\selfdestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cursor\\selfdestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|f:\\up\\taptapgame\\taptapgame\\my project\\assets\\script\\cursor\\stonearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\cursor\\stonearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cursor\\stonearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -78,17 +78,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "SelfDestroy.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\SelfDestroy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSor\\SelfDestroy.cs",
               "ToolTip": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\SelfDestroy.cs",
               "RelativeToolTip": "Assets\\Script\\CurSor\\SelfDestroy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvw8AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T15:25:53.248Z",
               "EditorCaption": ""
@@ -103,12 +103,11 @@
               "RelativeToolTip": "Assets\\Script\\CurSor\\StoneArea.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAwCMAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T15:14:55.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T15:14:55.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "InteractArea.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\InteractArea.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSor\\InteractArea.cs",
@@ -116,12 +115,11 @@
               "RelativeToolTip": "Assets\\Script\\CurSor\\InteractArea.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:00:31.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T14:00:31.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
@@ -129,12 +127,11 @@
               "RelativeToolTip": "Assets\\Script\\GameManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T15:02:56.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T15:02:56.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InvestigateArea.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\InvestigateArea.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSor\\InvestigateArea.cs",
@@ -142,21 +139,19 @@
               "RelativeToolTip": "Assets\\Script\\CurSor\\InvestigateArea.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAwAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:57:18.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:57:18.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CurSorManager.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSorManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSorManager.cs",
               "ToolTip": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSorManager.cs",
               "RelativeToolTip": "Assets\\Script\\CurSorManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAhAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAABUwBoAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T10:28:39.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T10:28:39.385Z"
             },
             {
               "$type": "Document",
