@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -26,10 +28,14 @@ public class Dream1Game : MonoBehaviour
     [Header("场景2")]
     public List<GameObject> sceneItems;
     public List<Transform> originTF;
+    public List<GameObject> endingTriggers;
+    public List<string> dialogueOnScene2Start;
+    public List<string> dialogueOnItemInteraction;
+    public List<string> dialogue;
     public Transform scene2StartPoint;
 
     [Header("过渡")]
-    public Image transition;
+    public UIFade transition;
 
     [Header("对话框相关")]
     public GameObject dialog;
@@ -50,7 +56,10 @@ public class Dream1Game : MonoBehaviour
     #endregion
 
     #region 场景2
-    private int sceneItemIndex;
+    private int sceneItemIndex = -1;
+    private List<int> resetObjects = new List<int>();
+    private bool ending = false;
+    private GameObject endingTriggerObj;
     #endregion
 
     private void Awake()
@@ -70,6 +79,8 @@ public class Dream1Game : MonoBehaviour
 
     private void Update()
     {
+        if (ending) return;
+
         if (currentScene == Dream1SceneEnum.Scene1)//画廊
         {
             _camera.transform.position = new Vector3(player.transform.position.x, 0, -10);
@@ -118,12 +129,40 @@ public class Dream1Game : MonoBehaviour
             }
         }
 
-        if (currentScene == Dream1SceneEnum.Scene2)
+        if (currentScene == Dream1SceneEnum.Scene2)//家庭
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (!CanMove)//不能移动时按回车关闭对话框
             {
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    CloseDialog();
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Return) && sceneItemIndex != -1 && CanMove && !resetObjects.Contains(sceneItemIndex))//与需要归位的物体进行交互，保存已交互物品的索引
+            {
+                //交互物品索引为下列3种时展开对话
+                if (sceneItemIndex == 4)
+                {
+                    StartCoroutine(DialogueOnItemInteraction(4));
+                }
+                else if (sceneItemIndex == 0)
+                {
+                    StartCoroutine(DialogueOnItemInteraction(0));
+                }
+                else if (sceneItemIndex == 2)
+                {
+                    StartCoroutine(DialogueOnItemInteraction(2));
+                }
+                //物品归位，保存索引
                 sceneItems[sceneItemIndex].transform.position = originTF[sceneItemIndex].position;
                 sceneItems[sceneItemIndex].transform.rotation = originTF[sceneItemIndex].rotation;
+                resetObjects.Add(sceneItemIndex);
+            }
+            else if (resetObjects.Count == 7)//物品归位完毕，结束
+            {
+                //End
+                ending = true;
+                StartCoroutine(EndingDialogue());
             }
         }
     }
@@ -158,22 +197,94 @@ public class Dream1Game : MonoBehaviour
 
     private void ChangeScene2()
     {
+        transition.callBack = () =>
+        {
+            scene2.SetActive(true);
+            tilemap2.SetActive(true);
+        };
+
         player.transform.position = scene2StartPoint.position;
         _camera.transform.position = cameraOriginPoint;
-        scene1.SetActive(false);
-        scene2.SetActive(true);
-        transition.gameObject.SetActive(true);
-        tilemap1.SetActive(false);
-        tilemap2.SetActive(true);
-
         player.GetComponent<PlayerMovement2D>().action = TriggerSceneItem;
+        tilemap1.SetActive(false);
+        scene1.SetActive(false);
 
+        transition.gameObject.SetActive(true);
+
+        StartCoroutine(StartScene2());
     }
     #endregion
 
+    #region 场景2对话
+    IEnumerator StartScene2()
+    {
+        yield return new WaitForSeconds(2);
 
+        for (int i = 0; i < dialogueOnScene2Start.Count; i++)
+        {
+            SetDialog(dialogueOnScene2Start[i]);
+            yield return new WaitWhile(() => { return dialog.activeSelf; });
+            CanMove = false;
+            yield return new WaitForSeconds(0.3f);
+        }
+        CanMove = true;
+    }
 
-    #region 画作交互
+    IEnumerator DialogueOnItemInteraction(int index)
+    {
+        if (sceneItemIndex == 4)
+        {
+            SetDialog(dialogueOnItemInteraction[0]);
+        }
+        else if (sceneItemIndex == 0)
+        {
+            SetDialog(dialogueOnItemInteraction[1]);
+        }
+        else if (sceneItemIndex == 2)
+        {
+            SetDialog(dialogueOnItemInteraction[2]);
+        }
+        yield return null;
+    }
+
+    IEnumerator EndingDialogue()
+    {
+        for (int i = 0; i < dialogue.Count; i++)
+        {
+            SetDialog(dialogue[i]);
+            yield return new WaitUntil(() => { return Input.GetKeyDown(KeyCode.Return); });
+            CloseDialog();
+            CanMove = false;
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        CanMove = true;
+
+        while (true)
+        {
+            yield return null;
+            if (!Input.GetKeyDown(KeyCode.Return)) continue;
+            
+            for (int i = 0; i < endingTriggers.Count; i++)
+            {
+                if (endingTriggers[i] == endingTriggerObj)
+                {
+                    //结束
+                    Ending();
+                    yield break;
+                }
+            }
+        }
+    }
+    #endregion
+
+    private void Ending()
+    {
+        CanMove = false;
+        Debug.Log("Ending");
+    }
+
+    #region 对话
     private void SetDialog(string content)
     {
         CanMove = false;
@@ -193,8 +304,10 @@ public class Dream1Game : MonoBehaviour
         frame1.gameObject.SetActive(false);
         frame2.gameObject.SetActive(false);
     }
+    #endregion
 
-        
+    #region 场景1画作交互
+
     private void Birthday(string content)
     {
         SetDialog(content);
@@ -203,6 +316,7 @@ public class Dream1Game : MonoBehaviour
         frame1.gameObject.SetActive(true);
         frame2.gameObject.SetActive(false);
     }
+
 
     //回调事件
     public void TriggerPictures(GameObject obj)
@@ -226,6 +340,14 @@ public class Dream1Game : MonoBehaviour
             if (obj == sceneItems[i])
             {
                 sceneItemIndex = i;
+            }
+        }
+
+        for(int i = 0; i < endingTriggers.Count; i++)
+        {
+            if (endingTriggers[i] == obj)
+            {
+                endingTriggerObj = obj;
             }
         }
     }
