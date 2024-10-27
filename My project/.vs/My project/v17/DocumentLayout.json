@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\day2\\passdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\day2\\passdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\day2\\piecedetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\day2\\piecedetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|f:\\up\\taptapgame\\taptapgame\\my project\\assets\\script\\dream4\\uidrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\dream4\\uidrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,11 +27,11 @@
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\dream4\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|f:\\up\\taptapgame\\taptapgame\\my project\\assets\\script\\cursor\\paper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\cursor\\paper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cursor\\paper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|f:\\up\\taptapgame\\taptapgame\\my project\\assets\\script\\dream4\\new folder\\imagemovetotarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\dream4\\new folder\\imagemovetotarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\dream4\\new folder\\imagemovetotarget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -63,14 +71,6 @@
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\timemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\day2\\passdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\day2\\passdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\day2\\piecedetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\day2\\piecedetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|F:\\UP\\TapTapGame\\TapTapGame\\My project\\assets\\script\\event\\gameventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\event\\gameventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -82,24 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ImageMoveToTarget.cs",
-              "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs",
-              "ToolTip": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs [\u53EA\u8BFB]",
-              "RelativeToolTip": "Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs [\u53EA\u8BFB]",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxkAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:13:52.382Z",
-              "EditorCaption": " [\u53EA\u8BFB]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UIDrag.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\UIDrag.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\UIDrag.cs",
@@ -112,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Paper.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\Paper.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSor\\Paper.cs",
@@ -120,12 +107,11 @@
               "RelativeToolTip": "Assets\\Script\\CurSor\\Paper.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T15:57:07.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T15:57:07.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "InteractArea.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\InteractArea.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSor\\InteractArea.cs",
@@ -133,12 +119,11 @@
               "RelativeToolTip": "Assets\\Script\\CurSor\\InteractArea.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:00:31.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T14:00:31.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "GameManager.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
@@ -146,12 +131,11 @@
               "RelativeToolTip": "Assets\\Script\\GameManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T15:02:56.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T15:02:56.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "InvestigateArea.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSor\\InvestigateArea.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSor\\InvestigateArea.cs",
@@ -163,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "CurSorManager.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\CurSorManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CurSorManager.cs",
@@ -175,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Day1Game.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Day1\\Day1Game.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Day1\\Day1Game.cs",
@@ -187,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Slot.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\Slot.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\Slot.cs",
@@ -195,12 +179,11 @@
               "RelativeToolTip": "Assets\\Script\\Dream4\\Slot.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T07:04:32.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T07:04:32.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BackPack.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\BackPack.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\BackPack.cs",
@@ -208,12 +191,11 @@
               "RelativeToolTip": "Assets\\Script\\Dream4\\BackPack.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:50:07.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T14:50:07.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Inventory.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\Inventory.cs",
@@ -221,12 +203,11 @@
               "RelativeToolTip": "Assets\\Script\\Dream4\\Inventory.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T10:32:57.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T10:32:57.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ItemGet.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\ItemGet.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\ItemGet.cs",
@@ -238,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Jakub.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Day3\\Jakub.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Day3\\Jakub.cs",
@@ -250,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "TimeManager.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\TimeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TimeManager.cs",
@@ -262,15 +243,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 0,
               "Title": "PassDetection.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Day2\\PassDetection.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Day2\\PassDetection.cs",
               "ToolTip": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Day2\\PassDetection.cs",
               "RelativeToolTip": "Assets\\Script\\Day2\\PassDetection.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAADwvxoAAAATAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T13:54:53.39Z"
+              "WhenOpened": "2024-10-20T13:54:53.39Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -286,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "PieceDetection.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Day2\\PieceDetection.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Day2\\PieceDetection.cs",
@@ -294,11 +276,24 @@
               "RelativeToolTip": "Assets\\Script\\Day2\\PieceDetection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T13:24:51.248Z"
+              "WhenOpened": "2024-10-20T13:24:51.248Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "ImageMoveToTarget.cs",
+              "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs",
+              "ToolTip": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs [\u53EA\u8BFB]",
+              "RelativeToolTip": "Assets\\Script\\Dream4\\New Folder\\ImageMoveToTarget.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:13:52.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "CircleRotation.cs",
               "DocumentMoniker": "F:\\UP\\TapTapGame\\TapTapGame\\My project\\Assets\\Script\\Day2\\CircleRotation.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Day2\\CircleRotation.cs",
