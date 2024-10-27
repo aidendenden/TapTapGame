@@ -6,6 +6,8 @@ public class PassDetection : MonoBehaviour
 {
 
     [SerializeField] PieceDetection[] pieceDetections;
+    [SerializeField] GameObject watch;
+    [SerializeField] GameObject puzzle;
     private void Start()
     {
        
@@ -34,7 +36,7 @@ public class PassDetection : MonoBehaviour
             }
         }
         GameEventManager.Instance.Triggered("GameOnFinsh",transform);
-        Debug.Log("isPass");
+        watch.SetActive(true);
       
     }
 }
