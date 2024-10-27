@@ -9,6 +9,8 @@ public class PlayerMovement2D : MonoBehaviour
     [Range(-1f, 1f)] public float vertical;
     public Animator animator = null;
     public new Rigidbody2D rigidbody;
+    public AudioSource audioSource;
+    public AudioClip[] clip;
     
     private Vector2 movement;
     
@@ -83,5 +85,27 @@ public class PlayerMovement2D : MonoBehaviour
             animator.SetBool("WalkUp", false);
             animator.SetBool("WalkDown", false);
         }
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            PlaySound();
+        }
+        else
+        {
+            StopPlaySound();
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (audioSource.isPlaying) return;
+        int index = Random.Range(0, clip.Length - 1);
+        audioSource.clip = clip[index];
+        audioSource.Play();
+    }
+
+    private void StopPlaySound()
+    {
+        audioSource.Stop();
     }
 }
