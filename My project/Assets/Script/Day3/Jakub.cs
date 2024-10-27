@@ -7,8 +7,14 @@ using UnityEngine.UI;
 public class Jakub : MonoBehaviour
 {
      private string rightAnswer ="Jakub";
-    [SerializeField] private TMP_InputField inputField;         
+    private string rightAnswer1 = "jakub";
+    [SerializeField] private InputField inputField;         
     [SerializeField] private Button confirmButton;
+    public GameObject workerID;
+    public GameObject passWordPanel;
+    public GameObject paperPazzel;
+
+    public GameObject wrongPanel;
 
     private void Start()
     {
@@ -17,12 +23,17 @@ public class Jakub : MonoBehaviour
     }
     public void ReadAndDetectRightAnswer(string s)
     {
-        if (s == rightAnswer)
+        if (s == rightAnswer||s==rightAnswer1)
         {
-            Debug.Log("´ð¶ÔÁË");
+            GameEventManager.Instance.Triggered("GameOnFinsh",transform);
+            workerID.SetActive(true);
+            passWordPanel.SetActive(false);
+            paperPazzel.SetActive(false);
+            PassWordPanel.IsIDGet = true;
         }else
         {
-            Debug.Log("´ð´íÁË");
+            wrongPanel.SetActive(true);
+            TimeManager.StartTimer(()=>wrongPanel.SetActive(false),2f);
         }
     }
 }
