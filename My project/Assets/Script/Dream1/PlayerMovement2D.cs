@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class PlayerMovement2D : MonoBehaviour
     public AudioClip[] clip;
     
     private Vector2 movement;
+
+    public Action<GameObject> action;
     
     public void Awake()
     {
@@ -31,9 +34,19 @@ public class PlayerMovement2D : MonoBehaviour
     {
         
         if (!Application.isFocused) return;
-      
-        HandleMove();
-   
+
+        if (Dream1Game.CanMove)
+        {
+            HandleMove();
+        }
+        else
+        {
+            //防止交互画作的时候播放动画
+            animator.SetBool("WalkRight", false);
+            animator.SetBool("WalkLeft", false);
+            animator.SetBool("WalkUp", false);
+            animator.SetBool("WalkDown", false);
+        }
     }
 
 
@@ -41,12 +54,24 @@ public class PlayerMovement2D : MonoBehaviour
     {
      
         if (!Application.isFocused) return;
-   
-        
+
+        if (!Dream1Game.CanMove) return;//防止交互画作的时候继续移动
+
         movement.x = horizontal;
         movement.y = vertical;
         rigidbody.MovePosition(rigidbody.position + movement.normalized * moveSpeedMultiplier * Time.fixedDeltaTime);
     }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Pictures")
+        {
+            action?.Invoke(collision.gameObject);
+        }
+    }
+
+
 
     void HandleMove()
     {
@@ -99,7 +124,7 @@ public class PlayerMovement2D : MonoBehaviour
     private void PlaySound()
     {
         if (audioSource.isPlaying) return;
-        int index = Random.Range(0, clip.Length - 1);
+        int index = UnityEngine.Random.Range(0, clip.Length - 1);
         audioSource.clip = clip[index];
         audioSource.Play();
     }
