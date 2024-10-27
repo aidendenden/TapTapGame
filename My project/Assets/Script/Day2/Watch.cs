@@ -15,6 +15,7 @@ public class Watch : MonoBehaviour
     }
     public void Finish()
     {
+        GameEventManager.Instance.Triggered("GameOnFinsh",transform);
         isFinishPuzzle = true;
     }
 }
