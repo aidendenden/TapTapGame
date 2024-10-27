@@ -45,5 +45,9 @@ public enum StuffType
 
 public enum SceneType
 {
-    test
+    Day1,
+    Day2,
+    Day3,
+    Dream1,
+    Dream3,
 }
