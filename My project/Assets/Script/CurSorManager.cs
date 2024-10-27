@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CurSorManager : MonoBehaviour 
 {
-    //¼ì²âÇøÓòÌí¼ÓÅö×²Ìå£¬µ÷²éÇøÓòÌí¼Ó½Å±¾InvestigateArea,»¥¶¯ÇøÓòÌí¼Ó£ºInteractArea,Ê¯Í·ÇøÓòÌí¼ÓStoneArea
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½Å±ï¿½InvestigateArea,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½InteractArea,Ê¯Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½StoneArea
     [SerializeField] Texture2D defaultCursor;
     [SerializeField] Texture2D investigateCursor;
     [SerializeField] Texture2D interactCursor;
@@ -20,11 +20,11 @@ public class CurSorManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            //DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            Destroy(gameObject); 
+            //Destroy(gameObject); 
         }
     }
     private void Update()
