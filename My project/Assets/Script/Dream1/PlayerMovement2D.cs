@@ -65,7 +65,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Pictures")
+        if (collision.tag == "Pictures" || collision.tag == "SceneItem")
         {
             action?.Invoke(collision.gameObject);
         }

@@ -17,11 +17,18 @@ public class Dream1Game : MonoBehaviour
     public GameObject tilemap2;
     public GameObject scene1;
     public GameObject scene2;
+
+    [Header("场景1")]
     public List<GameObject> picture;
     public List<string> words;
     public Transform scene1StartPoint;
+
+    [Header("场景2")]
+    public List<GameObject> sceneItems;
+    public List<Transform> originTF;
     public Transform scene2StartPoint;
 
+    [Header("过渡")]
     public Image transition;
 
     [Header("对话框相关")]
@@ -32,17 +39,23 @@ public class Dream1Game : MonoBehaviour
     public Image frame1;
     public Image frame2;
 
+    public static bool CanMove = true;
     private Vector3 cameraOriginPoint = new Vector3(0, 0, -10);
     private Dream1SceneEnum currentScene;
+
+    #region 场景1
     private string triggerWords;
-    public static bool CanMove = true;
     private int pictureIndex;
     private readonly int BirthdayIndex = 16;
+    #endregion
+
+    #region 场景2
+    private int sceneItemIndex;
+    #endregion
 
     private void Awake()
     {
         _camera = Camera.main;
-        player.GetComponent<PlayerMovement2D>().action += TriggerPictures;
 
         CanMove = true;
         transition.gameObject.SetActive(false);
@@ -50,7 +63,9 @@ public class Dream1Game : MonoBehaviour
 
     private void Start()
     {
-        SceneChange(Dream1SceneEnum.Scene1);
+        //SceneChange(Dream1SceneEnum.Scene1);
+        SceneChange(Dream1SceneEnum.Scene2);
+
     }
 
     private void Update()
@@ -105,7 +120,11 @@ public class Dream1Game : MonoBehaviour
 
         if (currentScene == Dream1SceneEnum.Scene2)
         {
-
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                sceneItems[sceneItemIndex].transform.position = originTF[sceneItemIndex].position;
+                sceneItems[sceneItemIndex].transform.rotation = originTF[sceneItemIndex].rotation;
+            }
         }
     }
 
@@ -132,6 +151,9 @@ public class Dream1Game : MonoBehaviour
         scene2.SetActive(false);
         tilemap1.SetActive(true);
         tilemap2.SetActive(false);
+
+        player.GetComponent<PlayerMovement2D>().action = TriggerPictures;
+
     }
 
     private void ChangeScene2()
@@ -143,6 +165,9 @@ public class Dream1Game : MonoBehaviour
         transition.gameObject.SetActive(true);
         tilemap1.SetActive(false);
         tilemap2.SetActive(true);
+
+        player.GetComponent<PlayerMovement2D>().action = TriggerSceneItem;
+
     }
     #endregion
 
@@ -188,6 +213,19 @@ public class Dream1Game : MonoBehaviour
             {
                 pictureIndex = i;
                 triggerWords = words[i];
+            }
+        }
+    }
+    #endregion
+
+    #region 场景交互
+    public void TriggerSceneItem(GameObject obj)
+    {
+        for(int i = 0; i < sceneItems.Count; i++)
+        {
+            if (obj == sceneItems[i])
+            {
+                sceneItemIndex = i;
             }
         }
     }
