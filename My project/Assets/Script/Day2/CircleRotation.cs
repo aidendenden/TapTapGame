@@ -7,11 +7,11 @@ public class CircleRotation : MonoBehaviour
 {
     [SerializeField]private float rotationDuration;
     public LayerMask targetLayer;
-    private BoxCollider2D boxCollider;
+    private Collider2D boxCollider;
     public static bool canOperate=true;
     void Start()
     {       
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<Collider2D>();
     }
     void OnMouseDown()
     {
