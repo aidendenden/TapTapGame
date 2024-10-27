@@ -18,6 +18,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
         Time.timeScale = 1;
+        GameEventManager.Instance.ClearEventListeners();
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         //StartCoroutine(LoadLevel(loadSceneIndex));
     }
@@ -25,6 +26,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevelToIndex()
     {
         Time.timeScale = 1;
+        GameEventManager.Instance.ClearEventListeners();
         //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         StartCoroutine(LoadLevel(loadSceneIndex));
     }

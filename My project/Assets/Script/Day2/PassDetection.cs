@@ -17,7 +17,7 @@ public class PassDetection : MonoBehaviour
       
         GameEventManager.Instance.RemoveListener(HandleTrigger);
     }
-    private void HandleTrigger(string message, Transform _transform, Vector3 _vector3)
+    private void HandleTrigger(string message, Transform _transform)
     {
         if (message == "PuzzlePass")
         {

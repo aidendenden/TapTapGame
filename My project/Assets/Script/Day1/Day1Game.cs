@@ -181,6 +181,7 @@ public class Day1Game : MonoBehaviour
 
     private void Finish()
     {
+        GameEventManager.Instance.Triggered("GameOnFinsh",transform);
         Debug.Log("完成");
     }
 

@@ -1,6 +1,7 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -17,15 +18,15 @@ public class GameEventManager : MonoBehaviour
 
     public static GameEventManager Instance => Lazy.Value;
 
-    public delegate void TriggerEventHandler(string message, Transform _transform,Vector3 v);
+    public delegate void TriggerEventHandler(string message, Transform _transform);
 
     public static event TriggerEventHandler OnTrigger;
 
-    public void Triggered(string message, Transform _transform, Vector3 _vector3)
+    public void Triggered(string message, Transform _transform)
     {
        // Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
-            OnTrigger(message, _transform, _vector3);
+            OnTrigger(message, _transform);
     }
 
     public void AddListener(TriggerEventHandler listener)
@@ -47,6 +48,22 @@ public class GameEventManager : MonoBehaviour
 
     }
 
+    // private void OnEnable()
+    // {
+    //     SceneManager.sceneLoaded += OnSceneLoaded;
+    // }
+    //
+    // private void OnDisable()
+    // {
+    //     SceneManager.sceneLoaded -= OnSceneLoaded;
+    // }
+    //
+    // private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    // {
+    //     Debug.Log($"Scene {scene.name} loaded with mode {mode}");
+    //     ClearEventListeners();
+    // }
+    
       public void ClearEventListeners()
     {
         // 清空事件监听器

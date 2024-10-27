@@ -24,7 +24,7 @@ public class CircleRotation : MonoBehaviour
             collider.transform.SetParent(transform);
         }
         transform.DORotate(new Vector3(0f, 0f, transform.rotation.eulerAngles.z - 120f), rotationDuration, RotateMode.Fast);
-        TimeManager.StartTimer(()=> GameEventManager.Instance.Triggered("PuzzlePass", transform, Vector3.zero),0.25f);       
+        TimeManager.StartTimer(()=> GameEventManager.Instance.Triggered("PuzzlePass", transform),0.25f);       
     }
     void OperateCoolDown()
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -25,15 +26,24 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public Transform Hole;
+    public Transform HoleOld;
+
+    private void Start()
     {
-        
+        GameEventManager.OnTrigger += OnFinsh;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnFinsh(string message,Transform _transform)
     {
-        
+        string t = "GameOnFinsh";
+     if (string.Equals(message, t))
+     {
+         Hole.gameObject.SetActive(true);
+         HoleOld.gameObject.SetActive(false);
+         Debug.Log("Trigger event received: " + message, _transform);
+     }
     }
+    
 }
