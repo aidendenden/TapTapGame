@@ -14,6 +14,8 @@ public class Jakub : MonoBehaviour
     public GameObject passWordPanel;
     public GameObject paperPazzel;
 
+    public GameObject wrongPanel;
+
     private void Start()
     {
         // Add listener to the button, so it calls ReadAndDetectRightAnswer when clicked
@@ -27,9 +29,11 @@ public class Jakub : MonoBehaviour
             workerID.SetActive(true);
             passWordPanel.SetActive(false);
             paperPazzel.SetActive(false);
+            PassWordPanel.IsIDGet = true;
         }else
         {
-            Debug.Log("错误");
+            wrongPanel.SetActive(true);
+            TimeManager.StartTimer(()=>wrongPanel.SetActive(false),2f);
         }
     }
 }
