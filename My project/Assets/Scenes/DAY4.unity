@@ -191,8 +191,8 @@ Canvas:
   m_GameObject: {fileID: 12443419}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -709,6 +709,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933440238}
   m_CullTransparentMesh: 1
+--- !u!1 &1048896182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048896184}
+  - component: {fileID: 1048896183}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1048896183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048896182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a89481e9c4c6ff4f8d470f3844dd8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 2800000, guid: 0848d604a3aced84abc53cb5c069f7f2, type: 3}
+  investigateCursor: {fileID: 2800000, guid: c7ed8244e62af29499d06851d7c2a0a4, type: 3}
+  interactCursor: {fileID: 2800000, guid: 206027eee58ea7d4babb367141178cdf, type: 3}
+  clickParticle: {fileID: 7389084325944202548, guid: 62033d136af64ee4cb3af2addd26b258, type: 3}
+  clickStoneParticle: {fileID: 1321819312317017674, guid: 61a9f7f2caf35744094f8f1a6e48e5d9, type: 3}
+  isInStoneArea: 0
+--- !u!4 &1048896184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048896182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 264, y: 148.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173379335
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,3 +964,4 @@ SceneRoots:
   - {fileID: 1726181143}
   - {fileID: 833561212}
   - {fileID: 1173379337}
+  - {fileID: 1048896184}
