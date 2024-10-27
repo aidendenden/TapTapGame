@@ -19,6 +19,7 @@ public class Jakub : MonoBehaviour
     {
         if (s == rightAnswer)
         {
+            GameEventManager.Instance.Triggered("GameOnFinsh",transform);
             Debug.Log("正确");
         }else
         {

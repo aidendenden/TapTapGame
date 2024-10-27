@@ -33,6 +33,7 @@ public class PassDetection : MonoBehaviour
                 return;
             }
         }
+        GameEventManager.Instance.Triggered("GameOnFinsh",transform);
         Debug.Log("isPass");
       
     }
