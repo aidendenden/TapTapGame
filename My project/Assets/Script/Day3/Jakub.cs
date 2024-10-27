@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Jakub : MonoBehaviour
 {
      private string rightAnswer ="Jakub";
-    [SerializeField] private TMP_InputField inputField;         
+    [SerializeField] private InputField inputField;         
     [SerializeField] private Button confirmButton;
 
     private void Start()
@@ -19,10 +19,10 @@ public class Jakub : MonoBehaviour
     {
         if (s == rightAnswer)
         {
-            Debug.Log("´ð¶ÔÁË");
+            Debug.Log("æ­£ç¡®");
         }else
         {
-            Debug.Log("´ð´íÁË");
+            Debug.Log("é”™è¯¯");
         }
     }
 }

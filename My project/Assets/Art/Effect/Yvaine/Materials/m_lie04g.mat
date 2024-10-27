@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: m_lie02g
+  m_Name: m_lie04g
   m_Shader: {fileID: 4800000, guid: ea38630d39691214c8a32faf410fd799, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1a599ab8891a6f34fbd1e8cf59a6a9d7, type: 3}
+        m_Texture: {fileID: 2800000, guid: a255d146f5595aa4190d33a03b162d53, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
