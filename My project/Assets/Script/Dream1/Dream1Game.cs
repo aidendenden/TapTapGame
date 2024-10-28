@@ -32,10 +32,14 @@ public class Dream1Game : MonoBehaviour
     public List<string> dialogueOnScene2Start;
     public List<string> dialogueOnItemInteraction;
     public List<string> dialogue;
+    [TextArea(3, 10)]
+    public List<string> endingDialogue;
+    public Image endingPicture;
     public Transform scene2StartPoint;
 
     [Header("过渡")]
     public UIFade transition;
+    public LevelLoader levelLoader;
 
     [Header("对话框相关")]
     public GameObject dialog;
@@ -213,6 +217,14 @@ public class Dream1Game : MonoBehaviour
 
         StartCoroutine(StartScene2());
     }
+
+    private void UnloadScene()
+    {
+        scene1.SetActive(false);
+        tilemap1.SetActive(false);
+        scene2.SetActive(false);
+        tilemap2.SetActive(false);
+    }
     #endregion
 
     #region 场景2对话
@@ -280,8 +292,39 @@ public class Dream1Game : MonoBehaviour
 
     private void Ending()
     {
-        CanMove = false;
         Debug.Log("Ending");
+        CanMove = false;
+        player.SetActive(false);
+        UnloadScene();
+
+        StartCoroutine(End());
+    }
+
+    IEnumerator End()
+    {
+        endingPicture.gameObject.SetActive(true);
+        float elapsedTime = 0f;
+        Color color = endingPicture.color;
+        while (elapsedTime < 1)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(0, 1, elapsedTime / 1);
+            endingPicture.color = new Color(color.r, color.g, color.b, alpha);
+            yield return null;
+        }
+        yield return null;
+
+        for (int i = 0; i < endingDialogue.Count; i++)
+        {
+            SetDialog(endingDialogue[i]);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return) );
+            CloseDialog();
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        yield return new WaitForSeconds(1);
+
+        levelLoader.LoadNextLevel();
     }
 
     #region 对话
