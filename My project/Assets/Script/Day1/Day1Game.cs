@@ -30,6 +30,8 @@ public class Day1Game : MonoBehaviour
 
     private Dictionary<int, int> pairs = new Dictionary<int, int>();
 
+    public Transform Open;
+
     private void OnEnable()
     {
         for (int i = 0; i < count; i++)
@@ -181,6 +183,7 @@ public class Day1Game : MonoBehaviour
 
     private void Finish()
     {
+        Open.gameObject.SetActive(true);
         GameEventManager.Instance.Triggered("GameOnFinsh",transform);
         Debug.Log("完成");
     }
