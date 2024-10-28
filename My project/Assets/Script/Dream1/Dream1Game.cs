@@ -72,8 +72,8 @@ public class Dream1Game : MonoBehaviour
 
     private void Start()
     {
-        //SceneChange(Dream1SceneEnum.Scene1);
-        SceneChange(Dream1SceneEnum.Scene2);
+        SceneChange(Dream1SceneEnum.Scene1);
+        //SceneChange(Dream1SceneEnum.Scene2);
 
     }
 
